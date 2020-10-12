@@ -246,7 +246,7 @@ async function fetchData() {
   const yesterday = formatter.string(new Date(Date.now() - 864e5));
 
   resp = await new Request(
-    `${GITLAB_URL}/api/v4/users/thomas/events?after=${yesterday}&private_token=${ACCESS_TOKEN}`
+    `${GITLAB_URL}/api/v4/users/${USERNAME}/events?after=${yesterday}&private_token=${ACCESS_TOKEN}`
   ).loadJSON();
   const contribCount = resp.length;
 
