@@ -69,4 +69,4 @@ The script is authored by [@thartwi](https://twitter.com/thartwi) (me) on an ong
 
 Thanks to [@andyngo](https://twitter.com/andyngo) for some code to load the images from your iCloud Drive folder and the project template!\
 Thanks to [@simonbs](https://twitter.com/simonbs) for making an awesome app!\
-Thanks to [@gitlab](https://twitter.com/gitlab) for a nice API 🙂
+Thanks to [@gitlab](https://twitter.com/gitlab) for a nice API and the nice icons 🙂
