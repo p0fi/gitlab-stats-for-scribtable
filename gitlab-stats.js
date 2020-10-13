@@ -229,7 +229,7 @@ async function getAsset(name) {
 
 async function fetchData() {
   let resp = await new Request(
-    `${GITLAB_URL}/api/v4/issues?state=opened&scope=assigned_to_me&private_token=${ACCESS_TOKEN}`
+    `${GITLAB_URL}/api/v4/issues?state=opened&scope=assigned_to_me&per_page=100&private_token=${ACCESS_TOKEN}`
   ).loadJSON();
   const assignedIssueCount = resp.length;
 
