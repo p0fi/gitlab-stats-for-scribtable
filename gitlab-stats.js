@@ -228,26 +228,28 @@ async function getAsset(name) {
 }
 
 async function fetchData() {
-  let resp = await new Request(
-    `${GITLAB_URL}/api/v4/issues?state=opened&scope=assigned_to_me&per_page=100&private_token=${ACCESS_TOKEN}`
-  ).loadJSON();
+  let req = new Request(`${GITLAB_URL}/api/v4/issues?state=opened&scope=assigned_to_me&per_page=100`);
+  req.headers = { Authorization: `Bearer ${ACCESS_TOKEN}` };
+  let resp = await req.loadJSON();
   const assignedIssueCount = resp.length;
 
-  resp = await new Request(`${GITLAB_URL}/api/v4/todos?private_token=${ACCESS_TOKEN}`).loadJSON();
+  req = new Request(`${GITLAB_URL}/api/v4/todos`);
+  req.headers = { Authorization: `Bearer ${ACCESS_TOKEN}` };
+  resp = await req.loadJSON();
   const todoCount = resp.length;
 
-  resp = await new Request(
-    `${GITLAB_URL}/api/v4/merge_requests?scope=assigned_to_me&state=opened&private_token=${ACCESS_TOKEN}`
-  ).loadJSON();
+  req = new Request(`${GITLAB_URL}/api/v4/merge_requests?scope=assigned_to_me&state=opened`);
+  req.headers = { Authorization: `Bearer ${ACCESS_TOKEN}` };
+  resp = await req.loadJSON();
   const assingedMrCount = resp.length;
 
   const formatter = new DateFormatter();
   formatter.dateFormat = 'yyyy-MM-dd';
   const yesterday = formatter.string(new Date(Date.now() - 864e5));
 
-  resp = await new Request(
-    `${GITLAB_URL}/api/v4/users/${USERNAME}/events?after=${yesterday}&private_token=${ACCESS_TOKEN}`
-  ).loadJSON();
+  req = new Request(`${GITLAB_URL}/api/v4/users/thomas/events?after=${yesterday}`);
+  req.headers = { Authorization: `Bearer ${ACCESS_TOKEN}` };
+  resp = await req.loadJSON();
   const contribCount = resp.length;
 
   return {
