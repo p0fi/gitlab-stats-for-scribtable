@@ -2,7 +2,7 @@
 
 ![cover](https://github.com/p0fi/gitlab-stats-for-scribtable/blob/main/cover.png)
 
-Note: This script requires at least [Scriptable](https://scriptable.app/) version 1.5.2!
+Note: This script requires at least [Scriptable](https://scriptable.app/) version 1.6!
 
 ## What's this?
 
@@ -58,7 +58,6 @@ iCloud Drive/
 ## Known Issues
 
 * Sometimes the images would fail to download. In the event where that happens, check the `gitlab-stats` folder in your iCloud Drive to make sure that the images are uploaded correctly. If you see 'Waiting...' on your files, try toggling Airplane Mode on and off to restart the upload.
-* The support for dark mode detection does not work very well right now, according to [@simonbs](https://twitter.com/simonbs). It will change to light or dark appearance only some hours after it changed. I hope this gets resolved by Scriptable or iOS soon ™ 
 * Right now the widget only supports the medium and small widget size. A Large sized version may follow in the future
 
 ## About this project

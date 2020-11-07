@@ -15,23 +15,26 @@ const ACCESS_TOKEN = '';
 
 /*
     Color Configuration
-    
+
     Choose the colors of the text, background and icons
     Different settings for dark and light mode are possible
 */
 function colorConfig() {
+  // general
   const tintLogo = false; // set to true to color the gitlab logo
   const tintColor = new Color('#FC6D26');
 
-  const [bgColor, textColor] = isDarkMode
-    ? // dark mode
-      [new Color('#1A1B1E', 1), new Color('#E3E3E3')]
-    : // light mode
-      [new Color('#ffffff', 1), new Color('#000000')];
+  // dark mode
+  const darkBackgroud = new Color('#1A1B1E');
+  const darkText = new Color('#E3E3E3');
+
+  // light mode
+  const lightBackgroud = new Color('#FFFFFF');
+  const lightText = new Color('#000000');
 
   return {
-    bgColor: bgColor,
-    textColor: textColor,
+    bgColor: Color.dynamic(lightBackgroud, darkBackgroud),
+    textColor: Color.dynamic(lightText, darkText),
     tintColor: tintColor,
     tintLogo: tintLogo,
   };
