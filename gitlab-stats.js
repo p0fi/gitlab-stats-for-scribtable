@@ -47,7 +47,7 @@ if (config.runsInWidget) {
   Script.setWidget(widget);
   Script.complete();
 } else {
-  // For debugging
+  // choose any size for debugging
   const size = 'small';
   //const size = 'medium'
   //const size = 'large'
@@ -174,6 +174,7 @@ async function createWidget(size) {
 
 function addItem(img, description, count, link, stack, size) {
   const colors = colorConfig();
+  // small size
   if (size == 'small') {
     const line = stack.addStack();
     line.layoutVertically();
@@ -187,7 +188,9 @@ function addItem(img, description, count, link, stack, size) {
     const wname = line.addText(count);
     wname.font = Font.boldSystemFont(20);
     wname.textColor = colors.textColor;
-  } else if (size == 'medium') {
+  }
+  // medium size
+  else if (size == 'medium') {
     const item = stack.addStack();
     item.layoutVertically();
     item.url = link;
