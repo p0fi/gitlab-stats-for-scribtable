@@ -40,8 +40,6 @@ The widget can easily be adopted to any homescreen design with simple color conf
 7. Edit the Scriptable widget and choose `gitlab-stats` as the script. Next, set "When Interacting" to "Run Script" and you should be all set and ready to go. If you use a small size widget configure it to open a website when interacting and configure your GitLab URL there. 
 
 ## Known Issues
-
-* Sometimes the images would fail to download. In the event where that happens, check the `gitlab-stats` folder in your iCloud Drive to make sure that the images are uploaded correctly. If you see 'Waiting...' on your files, try toggling Airplane Mode on and off to restart the upload.
 * Right now the widget only supports the medium and small widget size. A Large sized version may follow in the future
 
 ## About this project
