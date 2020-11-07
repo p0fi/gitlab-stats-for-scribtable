@@ -31,23 +31,7 @@ The widget can easily be adopted to any homescreen design with simple color conf
 
 ## Instructions
 
-1. Download and extract the content of this repository into the Scriptable folder located in your iCloud Drive.
-
-Your Scriptable folder structure should look like this:
-
-```
-iCloud Drive/
-├─ Scriptable/
-│  ├─ gitlab-stats.js
-│  ├─ gitlab-stats/
-│  │  ├─ assets/
-│  │  │  ├─ gitlab-logo-gray.png
-│  │  │  ├─ gitlab-logo-white.png
-│  │  │  ├─ issues.png
-│  │  │  ├─ merge.png
-│  │  │  ├─ todo.png
-```
-
+1. Download and extract `gitlab-stats.js` into the Scriptable folder located in your iCloud Drive.
 2. Launch Scriptable and make sure that `gitlab-stats` is listed in the scripts view.
 3. Configure your gitlab connection information
 4. If you like, configure your color settings in the `colorConfig()` function to match the widget to your homescreen 🎨
